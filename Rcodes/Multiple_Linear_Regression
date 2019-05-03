@@ -11,8 +11,8 @@ rm(list=ls())
 
 dat <- read.csv(file='LM_multi.csv', sep=',', header=T)
 
-# regression analysis using existing function "glm()"
-fit <- glm (y ~ x1+x2+x3, data = dat) # linear (regression) model object
+# regression analysis using the function "glm()"
+fit <- glm (y ~ x1+x2+x3, data = dat) # linear (regression) model fit
 summary(fit)      # summary of the regression results
 
 #prediction with model
