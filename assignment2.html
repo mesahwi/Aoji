@@ -8,7 +8,7 @@
     <h1><a href="http://mesahwi.github.io/Aoji/">Aoji</a></h1>
     <h2>Assignment2</h2>
     <p>
-      <h3><a href="http://mesahwi.github.io/Aoji/data/Assignment2.csv">download Assignment1.csv</a><h3>
+      <h3><a href="http://mesahwi.github.io/Aoji/data/Assignment2.csv">download Assignment2.csv</a><h3>
       갑돌이는 와인을 마시려고 한다. 갑돌이는 각 와인의 fixed acidity 등 아래의 설명변수는 확인할 수 있지만, alcohol이 몇 도인지는 확인할 수 없다.</br>
       하지만 아오지를 열심히 들은 갑돌이는 설명변수를 이용해 와인의 도수를 예측할 수 있을 것이라고 생각한다.</br>
       </br></br>
@@ -27,17 +27,19 @@
       alcohol</br></br></br>
 
 
-      1. 모든 설명변수(fixed acidity, ..., sulphates)를 받아서 반응변수를 예측하는 회귀분석을 해보자.</br>
+      1. 모든 설명변수(fixed acidity, ..., sulphates)를 받아서 반응변수를 예측하는 회귀분석을 해 보자.</br>
         (설명변수를 다 타이핑하기 귀찮을 시에는 glm(alcohol ~ ., data=data) 과 같이 . 으로 대체할 수 있다)</br></br>
 
       2. PCA를 통해 설명변수의 차원을 줄여보자. </br>
          설명변수 데이터를 x라 할 때 x는 각 변수의 스케일이 다르기 때문에 그냥 PCA를 사용하면 스케일이 가장 큰 변수가 분산 대부분을 차지한다.</br> 
-         즉 효과적인 차원 축소가 이루어지지 않는다. 이럴 때는 princomp(x, cor = T) 로 스케일을 정규화하고 PCA를 하도록 한다.</br></br>
+         즉 효과적인 차원 축소가 이루어지지 않는다. cor = T를 추가하여 princomp(x, cor = T) 로 PCA를 하면 스케일 정규화를 하고 PCA를 하는 것과 같아진다.</br>
          1) Principal Component는 설명변수의 선형결합으로 이루어져있다. PC1을 이루는 결합은?</br>
-         2) 전체 분산의 90%만큼을 설명할 수 있도록 하려면 PC 몇 까지 사용해야 할까?</br>
+         2) 전체 분산의 90%만큼을 설명할 수 있도록 하려면 PC 몇 까지 사용해야 할까?</br></br>
 
       3. 2-2)에서 고른 PC들을 설명변수로 와인의 도수를 예측하는 회귀분석을 해보자. </br>
-      1.에서의 회귀분석 결과와 비교했을 때 어떤 것이 예측력이 더 좋은가? 그 이유는?</br></br>
+      1번에서의 회귀분석 결과와 비교했을 때 어떤 것이 예측력이 더 좋은가? 그 근거는?</br>
+      또, 왜 그렇게 된다고 생각하는가? PCA의 원리와 연관지어 설명해보자. 
+      </br></br>
       
       질문 있으면 언제든지 물어보세요!</br>
       R 코드와 결과 및 해석을 갠톡으로 보내주세요!
